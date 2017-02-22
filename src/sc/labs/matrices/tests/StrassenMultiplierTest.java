@@ -4,11 +4,21 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 import sc.labs.matrices.Matrix;
-import sc.labs.matrices.MatrixMultiplicator;
-import sc.labs.matrices.StrassenMultiplicator;
+import sc.labs.matrices.MatrixMultiplier;
+import sc.labs.matrices.StrassenMultiplier;
 
-public class StrassenMultiplicatorTest {
-
+/**
+ * Unit test for {@link StrassenMultiplier} class.
+ * 
+ * @author saifkhichi96
+ * @version 1.0
+ */
+public class StrassenMultiplierTest {
+	
+	/**
+	 * Asserts that an exception is thrown on multiplying matrices of
+	 * incompatible orders.
+	 */
 	@Test(expected=IllegalArgumentException.class)
 	public void test_multiply_incompatible_order(){
 		Matrix a = new Matrix(2, 2);
@@ -20,10 +30,13 @@ public class StrassenMultiplicatorTest {
 		b.setRow(1, new int[]{3, 4});
 		b.setRow(2, new int[]{5, 6});
 		
-		MatrixMultiplicator multiplicator = new StrassenMultiplicator();
+		MatrixMultiplier multiplicator = new StrassenMultiplier();
 		multiplicator.multiply(a, b);
 	}
-	
+
+	/**
+	 * Asserts that matrix multiplication returns correct result.
+	 */
 	@Test
 	public void test_multiply_compatible_order() {
 		Matrix a = new Matrix(2, 2);
@@ -34,7 +47,7 @@ public class StrassenMultiplicatorTest {
 		b.setRow(0, new int[]{1, 2});
 		b.setRow(1, new int[]{3, 4});
 		
-		MatrixMultiplicator multiplicator = new StrassenMultiplicator();
+		MatrixMultiplier multiplicator = new StrassenMultiplier();
 		Matrix c = multiplicator.multiply(a, b);
 		
 		assertEquals(c.getRows(), 2);
