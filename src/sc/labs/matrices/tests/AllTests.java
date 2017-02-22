@@ -5,7 +5,7 @@ import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
-@SuiteClasses({ IterativeMultiplicationTest.class, MatrixTest.class, StrassenMultiplicationTest.class })
+@SuiteClasses({ IterativeMultiplicatorTest.class, MatrixTest.class, StrassenMultiplicatorTest.class })
 public class AllTests {
 
 }
