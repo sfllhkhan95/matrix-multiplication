@@ -1,5 +1,14 @@
+# Binaries
 bin/
+
+# Configuration files
 *.ini
+
+# Eclipse project fils
 *.project
 *.DS_STORE
 *.classpath
+
+# Microsft Word files
+*.doc
+*.docx
