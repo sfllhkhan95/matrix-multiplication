@@ -3,9 +3,9 @@ package sc.labs.matrices;
 public class IterativeMultiplicator implements MatrixMultiplicator {
 
 	@Override
-	public Matrix multiply(Matrix a, Matrix b) throws ArithmeticException {
+	public Matrix multiply(Matrix a, Matrix b) throws IllegalArgumentException {
 		if (!a.isMultiplicableWith(b))
-			throw new ArithmeticException();
+			throw new IllegalArgumentException();
 		
 		// A (m x n) * B (n x p) = C (m x p)
 		Matrix result = new Matrix(a.getRows(), b.getColumns());

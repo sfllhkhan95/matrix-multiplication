@@ -9,7 +9,7 @@ import sc.labs.matrices.MatrixMultiplicator;
 
 public class IterativeMultiplicatorTest {
 
-	@Test(expected=ArithmeticException.class)
+	@Test(expected=IllegalArgumentException.class)
 	public void test_multiply_incompatible_order(){
 		Matrix a = new Matrix(2, 2);
 		a.setRow(0, new int[]{1, 2});
