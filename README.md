@@ -14,3 +14,6 @@ To use this matrix multiplication library:
 * Resulting Matrix object will be returned if multiplication is successful.
 * IllegalArgumentException will be thrown if the given matrices cannot be multiplied.
 
+## Documentation
+Visit https://sfllhkhan95.github.io/matrix-multiplication for JavaDoc
+
