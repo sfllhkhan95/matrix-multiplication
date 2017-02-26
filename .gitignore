@@ -7,6 +7,7 @@ bin/
 # Eclipse project fils
 *.project
 *.DS_STORE
+/.DS_Store
 *.classpath
 
 # Microsft Word files
