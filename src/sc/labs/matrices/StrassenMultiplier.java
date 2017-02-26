@@ -14,7 +14,7 @@ package sc.labs.matrices;
  * use {@link IterativeMultiplier}.
  * 
  * @author saifkhichi96
- * @version 1.0
+ * @version 1.1
  */
 public class StrassenMultiplier implements MatrixMultiplier {
 
@@ -23,7 +23,7 @@ public class StrassenMultiplier implements MatrixMultiplier {
 		/* Raise an exception if input matrices are either non-square matrices
 		 * or have incompatible orders. */
 		if (a.getRows() != a.getColumns() || b.getRows() != b.getColumns() 
-				|| a.isMultiplicableWith(b))
+				|| !a.isMultiplicableWith(b))
 			throw new IllegalArgumentException();
 		
 		/* Raise an exception if input matrices have order which is not a power of
